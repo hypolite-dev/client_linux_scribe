@@ -77,32 +77,32 @@ apt-get -y install $LISTE
 # Gnome Shell
 #############
 
-THEME_SHELL=Faience
-THEME_ICONES=Faience-Dark
+#THEME_SHELL=Faience
+#THEME_ICONES=Faience-Dark
 
 # Gnome Shell Install icons: Faenza, Faience
-apt-get install faenza-icon-theme faenza-icons-mono
-wget http://www.deviantart.com/download/255099649/faience_icon_theme_by_tiheum-d47vo5d.zip
-mkdir $HOME/.icons
-unzip faience_icon_theme_by_tiheum-d47vo5d.zip
-mv Faience* $HOME/.icons/
-rm -rf faience_icon_theme_by_tiheum-*.zip
-chown -R $USERNAME:$USERNAME $HOME/.icons
+#apt-get install faenza-icon-theme faenza-icons-mono
+#wget http://www.deviantart.com/download/255099649/faience_icon_theme_by_tiheum-d47vo5d.zip
+#mkdir $HOME/.icons
+#unzip faience_icon_theme_by_tiheum-d47vo5d.zip
+#mv Faience* $HOME/.icons/
+#rm -rf faience_icon_theme_by_tiheum-*.zip
+#chown -R $USERNAME:$USERNAME $HOME/.icons
 
 # Gnome Shell themes: Faience, Nord
-mkdir $HOME/.themes
+#mkdir $HOME/.themes
 # -- Faience
-wget http://www.deviantart.com/download/255097456/gnome_shell___faience_by_tiheum-d47vmgg.zip
-unzip gnome_shell___faience_by_tiheum-d47vmgg.zip
-mv Faience $HOME/.themes
-rm -rf gnome_shell___faience_by_tiheum-*.zip
+#wget http://www.deviantart.com/download/255097456/gnome_shell___faience_by_tiheum-d47vmgg.zip
+#unzip gnome_shell___faience_by_tiheum-d47vmgg.zip
+#mv Faience $HOME/.themes
+#rm -rf gnome_shell___faience_by_tiheum-*.zip
 # -- Nord
-wget http://www.deviantart.com/download/214295138/gnome_shell__nord_by_0rax0-d3jl36q.zip
-unzip gnome_shell__nord_by_0rax0-d3jl36q.zip
-mv Nord ~/.themes
-rm -rf nord_by_0rax0-*.zip
+#wget http://www.deviantart.com/download/214295138/gnome_shell__nord_by_0rax0-d3jl36q.zip
+#unzip gnome_shell__nord_by_0rax0-d3jl36q.zip
+#mv Nord ~/.themes
+#rm -rf nord_by_0rax0-*.zip
 # Set perm for all the themes
-chown -R $USERNAME:$USERNAME $HOME/.themes
+#chown -R $USERNAME:$USERNAME $HOME/.themes
 
 # Set the theme shell and icons 
 # gsettings set org.gnome.shell.extensions.user-theme name $THEME_SHELL
@@ -112,18 +112,18 @@ chown -R $USERNAME:$USERNAME $HOME/.themes
 ########
 
 # Conky theme
-wget -O $HOME/.conkyrc https://raw.github.com/nicolargo/ubuntupostinstall/master/conkyrc
+#wget -O $HOME/.conkyrc https://raw.github.com/nicolargo/ubuntupostinstall/master/conkyrc
 
 # GoogleEarth (need packet generation > installation)
-make-googleearth-package --force
-dpkg -i GoogleEarth*.deb
-rm -f GoogleEarth*.deb GoogleEarthLinux.bin
+#make-googleearth-package --force
+#dpkg -i GoogleEarth*.deb
+#rm -f GoogleEarth*.deb GoogleEarthLinux.bin
 
 # Need to read DVD
-sh /usr/share/doc/libdvdread4/install-css.sh
+#sh /usr/share/doc/libdvdread4/install-css.sh
 
 # Vimrc
-wget -O - https://raw.github.com/vgod/vimrc/master/auto-install.sh | sh
+#wget -O - https://raw.github.com/vgod/vimrc/master/auto-install.sh | sh
 
 # Terminator
 #mkdir -p ~/.config/terminator
@@ -131,13 +131,13 @@ wget -O - https://raw.github.com/vgod/vimrc/master/auto-install.sh | sh
 #chown -R $USERNAME:$USERNAME ~/.config/terminator
 
 # Custom .bashrc
-cat >> $HOME/.bashrc << EOF
-alias la='ls -alF'
-alias ll='ls -lF'
-alias alert_helper='history|tail -n1|sed -e "s/^\s*[0-9]\+\s*//" -e "s/;\s*alert$//"'
-alias alert='notify-send -i /usr/share/icons/gnome/32x32/apps/gnome-terminal.png "[$?] $(alert_helper)"'
-EOF
-source $HOME/.bashrc
+#cat >> $HOME/.bashrc << EOF
+#alias la='ls -alF'
+#alias ll='ls -lF'
+#alias alert_helper='history|tail -n1|sed -e "s/^\s*[0-9]\+\s*//" -e "s/;\s*alert$//"'
+#alias alert='notify-send -i /usr/share/icons/gnome/32x32/apps/gnome-terminal.png "[$?] $(alert_helper)"'
+#EOF
+#source $HOME/.bashrc
 
 echo "========================================================================"
 echo
