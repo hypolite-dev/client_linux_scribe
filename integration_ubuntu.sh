@@ -22,8 +22,8 @@
 #Paramétrage par défaut
 #Changez les valeurs, ainsi, il suffira de taper 'entrée' à chaque question
 ###########################################################################
-scribe_def_ip="192.168.220.10"
-proxy_def_ip="172.16.0.252"
+scribe_def_ip="192.168.0.1"
+proxy_def_ip="192.168.0.100"
 proxy_def_port="3128"
 proxy_gnome_noproxy="[ 'localhost', '127.0.0.0/8', '172.16.0.0/16', '192.168.0.0/16', '*.crdp-lyon.fr', '*.crdplyon.lan' ]"
 proxy_env_noproxy="localhost,127.0.0.1,192.168.0.0/16,172.16.0.0/16,.crdp-lyon.fr,.crdplyon.lan"
